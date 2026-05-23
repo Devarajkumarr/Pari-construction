@@ -18,6 +18,7 @@
 
     <!-- AOS Animation -->
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    
 </head>
 
 <body>
@@ -172,11 +173,13 @@
 
     <div class="gallery-container">
 
-        <img src="images/work1.jpg" alt="Roofing Work">
+        <img src="images/work1.jpeg" alt="Roofing Work" onclick="openPopup(0)">
 
-        <img src="images/work2.jpg" alt="Welding Work">
+        <video autoplay muted loop playsinline onclick="openPopup(1)">
+            <source src="images/workvc.mp4" type="video/mp4">
+        </video>
 
-        <img src="images/work3.jpg" alt="Construction Work">
+        <img src="images/work2.jpeg" alt="Welding Work" onclick="openPopup(2)">
 
     </div>
 
@@ -267,6 +270,40 @@
             once: true
         });
     </script>
+
+<!-- Popup Viewer -->
+<div id="popup" class="popup">
+
+    <span class="close-btn"
+          onclick="closePopup()">
+        ✖
+    </span>
+
+    <!-- Previous -->
+    <span class="prev-btn"
+          onclick="changeMedia(-1)">
+        ❮
+    </span>
+
+    <!-- Image -->
+    <img id="popup-img"
+         style="display:none;">
+
+    <!-- Video -->
+    <video id="popup-video"
+           controls
+           autoplay
+           style="display:none;">
+        <source id="popup-video-source">
+    </video>
+
+    <!-- Next -->
+    <span class="next-btn"
+          onclick="changeMedia(1)">
+        ❯
+    </span>
+
+</div>
 
 </body>
 

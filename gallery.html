@@ -33,18 +33,47 @@
 
         <div class="gallery-grid">
 
-            <img src="images/work1.jpg" alt="">
-            <img src="images/work2.jpg" alt="">
-            <img src="images/work3.jpg" alt="">
-            <img src="images/work4.jpg" alt="">
-            <img src="images/work5.jpg" alt="">
-            <img src="images/work6.jpg" alt="">
-            <img src="images/work7.jpg" alt="">
-            <img src="images/work8.jpg" alt="">
+    <img src="images/work3.jpeg" onclick="openPopup(3)">
+    <img src="images/work5.jpeg" onclick="openPopup(4)">
+    <img src="images/work6.jpeg" onclick="openPopup(5)">
+    <img src="images/work7.jpeg" onclick="openPopup(6)">
+    <img src="images/work8.jpeg" onclick="openPopup(7)">
+    <img src="images/work9.jpeg" onclick="openPopup(8)">
+    <img src="images/work4.jpeg" onclick="openPopup(9)">
+    <img src="images/work11.jpeg" onclick="openPopup(10)">
 
-        </div>
+</div>
 
     </section>
+
+<div id="popup" class="popup">
+
+    <span class="close-btn"
+          onclick="closePopup()">
+        ✖
+    </span>
+
+    <span class="prev-btn"
+          onclick="changeMedia(-1)">
+        ❮
+    </span>
+
+    <img id="popup-img">
+
+    <video id="popup-video"
+           controls>
+        <source id="popup-video-source"
+                type="video/mp4">
+    </video>
+
+    <span class="next-btn"
+          onclick="changeMedia(1)">
+        ❯
+    </span>
+
+</div>
+
+<script src="script.js"></script>
 
 </body>
 </html>
